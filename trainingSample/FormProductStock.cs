@@ -322,7 +322,7 @@ namespace trainingSample
             double price;
             if (!double.TryParse(this.txtPrice.Text, out price))
             {
-                MessageBox.Show("単価は必須です。");
+                MessageBox.Show("単価は数値で入力してください。");
                 return false;
             }
 
@@ -347,7 +347,7 @@ namespace trainingSample
             double quantity;
             if (!double.TryParse(this.txtQuantity.Text, out quantity))
             {
-                MessageBox.Show("数量は必須です。");
+                MessageBox.Show("数量は数値で入力してください。");
                 return false;
             }
 
