@@ -29,10 +29,17 @@ namespace trainingSample
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.grdProduct = new System.Windows.Forms.DataGridView();
+            this.no = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.price = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.summary = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.addDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtProductCode = new System.Windows.Forms.TextBox();
             this.ldlProductCode = new System.Windows.Forms.Label();
             this.txtPrice = new System.Windows.Forms.TextBox();
@@ -44,13 +51,6 @@ namespace trainingSample
             this.btnUpdate = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.lblFormTitle = new System.Windows.Forms.Label();
-            this.no = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.productCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.productName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.price = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.summary = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.addDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.grdProduct)).BeginInit();
             this.SuspendLayout();
             // 
@@ -63,14 +63,14 @@ namespace trainingSample
             this.grdProduct.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("メイリオ", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grdProduct.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("メイリオ", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grdProduct.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.grdProduct.ColumnHeadersHeight = 31;
             this.grdProduct.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.grdProduct.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -83,23 +83,82 @@ namespace trainingSample
             this.addDate});
             this.grdProduct.Location = new System.Drawing.Point(12, 152);
             this.grdProduct.Name = "grdProduct";
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("メイリオ", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grdProduct.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("メイリオ", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grdProduct.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.grdProduct.RowHeadersWidth = 92;
             this.grdProduct.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("メイリオ", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.grdProduct.RowsDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("メイリオ", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.grdProduct.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.grdProduct.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("メイリオ", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.grdProduct.RowTemplate.Height = 30;
             this.grdProduct.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.grdProduct.Size = new System.Drawing.Size(865, 446);
+            this.grdProduct.Size = new System.Drawing.Size(865, 438);
             this.grdProduct.TabIndex = 0;
             this.grdProduct.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdProduct_CellDoubleClick);
+            // 
+            // no
+            // 
+            this.no.DataPropertyName = "no";
+            this.no.HeaderText = "No.";
+            this.no.MinimumWidth = 11;
+            this.no.Name = "no";
+            this.no.ReadOnly = true;
+            this.no.Width = 50;
+            // 
+            // productCode
+            // 
+            this.productCode.DataPropertyName = "productCode";
+            this.productCode.HeaderText = "商品コード";
+            this.productCode.MinimumWidth = 11;
+            this.productCode.Name = "productCode";
+            this.productCode.Width = 130;
+            // 
+            // productName
+            // 
+            this.productName.DataPropertyName = "productName";
+            this.productName.HeaderText = "商品名";
+            this.productName.MinimumWidth = 11;
+            this.productName.Name = "productName";
+            this.productName.Width = 140;
+            // 
+            // price
+            // 
+            this.price.DataPropertyName = "price";
+            this.price.HeaderText = "単価";
+            this.price.MinimumWidth = 11;
+            this.price.Name = "price";
+            this.price.Width = 225;
+            // 
+            // quantity
+            // 
+            this.quantity.DataPropertyName = "quantity";
+            this.quantity.HeaderText = "数量";
+            this.quantity.MinimumWidth = 11;
+            this.quantity.Name = "quantity";
+            this.quantity.Width = 225;
+            // 
+            // summary
+            // 
+            this.summary.DataPropertyName = "summary";
+            this.summary.HeaderText = "金額";
+            this.summary.MinimumWidth = 11;
+            this.summary.Name = "summary";
+            this.summary.Width = 225;
+            // 
+            // addDate
+            // 
+            this.addDate.DataPropertyName = "addDate";
+            this.addDate.HeaderText = "登録日付";
+            this.addDate.MinimumWidth = 11;
+            this.addDate.Name = "addDate";
+            this.addDate.ReadOnly = true;
+            this.addDate.Width = 150;
             // 
             // txtProductCode
             // 
@@ -123,7 +182,7 @@ namespace trainingSample
             // txtPrice
             // 
             this.txtPrice.Font = new System.Drawing.Font("メイリオ", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.txtPrice.ImeMode = System.Windows.Forms.ImeMode.Off;
+            this.txtPrice.ImeMode = System.Windows.Forms.ImeMode.Disable;
             this.txtPrice.Location = new System.Drawing.Point(448, 62);
             this.txtPrice.MaxLength = 5;
             this.txtPrice.Name = "txtPrice";
@@ -154,7 +213,7 @@ namespace trainingSample
             // txtQuantity
             // 
             this.txtQuantity.Font = new System.Drawing.Font("メイリオ", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.txtQuantity.ImeMode = System.Windows.Forms.ImeMode.Off;
+            this.txtQuantity.ImeMode = System.Windows.Forms.ImeMode.Disable;
             this.txtQuantity.Location = new System.Drawing.Point(448, 105);
             this.txtQuantity.MaxLength = 3;
             this.txtQuantity.Name = "txtQuantity";
@@ -197,7 +256,7 @@ namespace trainingSample
             // 
             this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button2.Font = new System.Drawing.Font("メイリオ", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.button2.Location = new System.Drawing.Point(777, 617);
+            this.button2.Location = new System.Drawing.Point(778, 601);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(99, 29);
             this.button2.TabIndex = 6;
@@ -214,59 +273,11 @@ namespace trainingSample
             this.lblFormTitle.TabIndex = 11;
             this.lblFormTitle.Text = "在庫管理画面";
             // 
-            // no
-            // 
-            this.no.DataPropertyName = "no";
-            this.no.HeaderText = "No.";
-            this.no.Name = "no";
-            this.no.ReadOnly = true;
-            this.no.Width = 50;
-            // 
-            // productCode
-            // 
-            this.productCode.DataPropertyName = "productCode";
-            this.productCode.HeaderText = "商品コード";
-            this.productCode.Name = "productCode";
-            this.productCode.Width = 130;
-            // 
-            // productName
-            // 
-            this.productName.DataPropertyName = "productName";
-            this.productName.HeaderText = "商品名";
-            this.productName.Name = "productName";
-            this.productName.Width = 140;
-            // 
-            // price
-            // 
-            this.price.DataPropertyName = "price";
-            this.price.HeaderText = "単価";
-            this.price.Name = "price";
-            // 
-            // quantity
-            // 
-            this.quantity.DataPropertyName = "quantity";
-            this.quantity.HeaderText = "数量";
-            this.quantity.Name = "quantity";
-            // 
-            // summary
-            // 
-            this.summary.DataPropertyName = "summary";
-            this.summary.HeaderText = "金額";
-            this.summary.Name = "summary";
-            // 
-            // addDate
-            // 
-            this.addDate.DataPropertyName = "addDate";
-            this.addDate.HeaderText = "登録日付";
-            this.addDate.Name = "addDate";
-            this.addDate.ReadOnly = true;
-            this.addDate.Width = 150;
-            // 
             // FormProductStock
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(884, 661);
+            this.ClientSize = new System.Drawing.Size(884, 641);
             this.Controls.Add(this.lblFormTitle);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.btnUpdate);

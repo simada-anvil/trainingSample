@@ -163,8 +163,8 @@ namespace trainingSample
                 // ================================================
                 // あとついでに登録ボタン⇒更新ボタンに切り替え
                 // ================================================
-                // 切り替わった事が分かりやすいように赤フォントにしておく。
                 btnUpdate.Text = "更新";
+                // 切り替わった事が分かりやすいように赤フォントにしておく。
                 btnUpdate.ForeColor = Color.Red;
             }
             catch (Exception ex)
@@ -215,7 +215,6 @@ namespace trainingSample
             // ================================================
             this.productStocks.Add(newStock);
 
-
         }
 
         /// <summary>
@@ -234,11 +233,13 @@ namespace trainingSample
             // ================================================
             // 入力値の各値を更新
             // ================================================
-            // 既にある行を更新するので、Noの採番は不要。
+
+            // ※既にある行を更新するので、Noの採番は不要。
+
             updateStock.productCode = this.txtProductCode.Text;    // 商品コード
             updateStock.productName = this.txtProductName.Text;    // 商品名
 
-            // ※単価、数量は文字列項目のため数値変換が必要
+            // 単価、数量は文字列項目のため数値変換が必要
             updateStock.price = int.Parse(this.txtPrice.Text);　　 // 単価 
             updateStock.quantity = int.Parse(this.txtQuantity.Text); // 数量
 
