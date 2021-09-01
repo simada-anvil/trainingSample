@@ -100,7 +100,6 @@ namespace trainingSample
             this.grdProduct.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.grdProduct.Size = new System.Drawing.Size(865, 438);
             this.grdProduct.TabIndex = 0;
-            this.grdProduct.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdProduct_CellDoubleClick);
             // 
             // no
             // 

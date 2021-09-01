@@ -47,14 +47,16 @@ namespace trainingSample.model
         private int _quantity = 0;
 
         /// <summary>
-        /// 数量
+        /// 合計金額
         /// </summary>
         private int _summary = 0;
 
         /// <summary>
         /// 登録日付
         /// </summary>
-        public string _addDate = string.Empty;
+        private string _addDate = string.Empty;
+
+        
 
         /// <summary>
         /// No.
