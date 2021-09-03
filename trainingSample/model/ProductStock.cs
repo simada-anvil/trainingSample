@@ -11,15 +11,6 @@ namespace trainingSample.model
     /// </summary>
     class ProductStock
     {
-        /// <summary>
-        /// コンストラクタ
-        ///    クラスのインスタンス化時に真っ先に動きメソッド
-        ///    インスタンス化と同時に定義しておきたい情報がある場合はセットしておく。
-        /// </summary>
-        public ProductStock()
-        {
-
-        }
 
         /// <summary>
         /// No.
@@ -27,7 +18,7 @@ namespace trainingSample.model
         private int _no = 0;
 
         /// <summary>
-        /// 商品コード
+        /// 
         /// </summary>
         private string _productCode = string.Empty;
 
@@ -56,22 +47,30 @@ namespace trainingSample.model
         /// </summary>
         private string _addDate = string.Empty;
 
-        
+       
 
         /// <summary>
         /// No.
         /// </summary>
         public int no {
-            get { return _no; }
-            set { _no = value; }
+            get { 
+                return _no; 
+            }
+            set { 
+                _no = value; 
+            }
         }
 
         /// <summary>
         /// 商品コード
         /// </summary>
         public string productCode {
-            get {   return _productCode; }
-            set {   _productCode = value; } 
+            get {   
+                return _productCode; 
+            }
+            set {   
+                _productCode = value; 
+            } 
         }
 
         /// <summary>
