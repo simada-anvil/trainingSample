@@ -76,6 +76,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="[Anvil]プログラミング入門%28仮題%29 %28第1.0版%29 .pptx" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
