@@ -327,10 +327,10 @@ namespace trainingSample
                 return false;
             }
 
-            //      0以上
+            //      1以上
             if (price <= 0)
             {
-                MessageBox.Show("単価は0以上で入力してください。");
+                MessageBox.Show("単価は1以上で入力してください。");
                 return false;
             }
 
@@ -352,10 +352,10 @@ namespace trainingSample
                 return false;
             }
 
-            //      0以上
+            //      1以上
             if (quantity <= 0)
             {
-                MessageBox.Show("数量は0以上で入力してください。");
+                MessageBox.Show("数量は1以上で入力してください。");
                 return false;
             }
 

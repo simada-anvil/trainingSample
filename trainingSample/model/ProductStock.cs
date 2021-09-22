@@ -47,19 +47,22 @@ namespace trainingSample.model
         private int _quantity = 0;
 
         /// <summary>
-        /// 数量
+        /// 合計金額
         /// </summary>
         private int _summary = 0;
 
         /// <summary>
         /// 登録日付
         /// </summary>
-        public string _addDate = string.Empty;
+        private string _addDate = string.Empty;
+
+
 
         /// <summary>
         /// No.
         /// </summary>
-        public int no {
+        public int no
+        {
             get { return _no; }
             set { _no = value; }
         }
@@ -67,47 +70,53 @@ namespace trainingSample.model
         /// <summary>
         /// 商品コード
         /// </summary>
-        public string productCode {
-            get {   return _productCode; }
-            set {   _productCode = value; } 
+        public string productCode
+        {
+            get { return _productCode; }
+            set { _productCode = value; }
         }
 
         /// <summary>
         /// 商品名
         /// </summary>
-        public string productName {
-            get {   return _productName; }
-            set {   _productName = value; } 
+        public string productName
+        {
+            get { return _productName; }
+            set { _productName = value; }
         }
 
         /// <summary>
         /// 単価
         /// </summary>
-        public int price {
-            get {   return _price; }
-            set {   _price = value; } 
+        public int price
+        {
+            get { return _price; }
+            set { _price = value; }
         }
 
         /// <summary>
         /// 数量
         /// </summary>
-        public int quantity { 
-            get {   return _quantity ; }
-            set {   _quantity = value; } 
+        public int quantity
+        {
+            get { return _quantity; }
+            set { _quantity = value; }
         }
 
         /// <summary>
         /// 金額
         /// </summary>
-        public int summary { 
-            get {   return _summary; } 
-            set {   _summary = value; } 
+        public int summary
+        {
+            get { return _summary; }
+            set { _summary = value; }
         }
 
         /// <summary>
         /// 登録日付
         /// </summary>
-        public string addDate {
+        public string addDate
+        {
             get { return _addDate; }
             set { _addDate = value; }
         }
