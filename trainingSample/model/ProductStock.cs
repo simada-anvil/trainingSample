@@ -21,6 +21,8 @@ namespace trainingSample.model
 
         }
 
+        #region メンバー変数
+
         /// <summary>
         /// No.
         /// </summary>
@@ -56,7 +58,9 @@ namespace trainingSample.model
         /// </summary>
         private string _addDate = string.Empty;
 
+        #endregion
 
+        #region プロパティ
 
         /// <summary>
         /// No.
@@ -120,6 +124,12 @@ namespace trainingSample.model
             get { return _addDate; }
             set { _addDate = value; }
         }
+
+        #endregion
+
+        #region クラス内メソッド
+            //なし
+        #endregion 
 
     }
 }
